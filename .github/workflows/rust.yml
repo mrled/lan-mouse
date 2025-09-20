@@ -126,7 +126,7 @@ jobs:
         path: target/debug/bundle/osx/Lan Mouse macOS (Intel).zip
 
   build-macos-aarch64:
-    runs-on: macos-14
+    runs-on: macos-26
     steps:
     - uses: actions/checkout@v4
     - name: install dependencies

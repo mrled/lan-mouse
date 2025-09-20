@@ -8,7 +8,7 @@ jobs:
        os: 
         - ubuntu-latest
         - macos-13
-        - macos-14
+        - macos-26
     name: "Build"
     runs-on: ${{ matrix.os }} 
     steps:
@@ -35,6 +35,6 @@ jobs:
       run: nix build --print-build-logs --show-trace .#packages.x86_64-darwin.lan-mouse
 
     - name: Build lan-mouse (aarch64-darwin)
-      if: matrix.os == 'macos-14'
+      if: matrix.os == 'macos-26'
       run: nix build --print-build-logs --show-trace .#packages.aarch64-darwin.lan-mouse
 
